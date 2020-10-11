@@ -48,6 +48,7 @@ class Connection: LiveData<Socket>(),
                 } catch (e: ConnectException){
                     Log.e("connection", "Fail connection", e)
                     connectStatus.postValue(Status.ERROR)
+                    this.postValue(Socket())
                 } catch (e: SocketTimeoutException){
                     connectStatus.postValue(Status.ERROR)
                     this.postValue(Socket())
