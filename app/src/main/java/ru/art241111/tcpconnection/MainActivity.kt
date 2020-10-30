@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import ru.art241111.tcpconnection.client.Client
+import com.github.art241111.tcpClient.Client
 
 class MainActivity : AppCompatActivity(){
     lateinit var client: Client
@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        client = Client(this)
+        client = Client()
 
         client.getConnectStatus().observe(this, {
             Log.d("change_socket_status", it.toString())

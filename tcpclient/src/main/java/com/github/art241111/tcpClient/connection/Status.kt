@@ -1,4 +1,4 @@
-package ru.art241111.tcpconnection.client.connection
+package com.github.art241111.tcpClient.connection
 
 /**
  * ENUM class that describes
